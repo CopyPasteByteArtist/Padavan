@@ -61,7 +61,8 @@ jobs:
         cat .config
         sudo ./clear_tree_simple
         sudo ./build_firmware_modify $m 0
-        sudo mv -f images/*.trx /opt/images/
+        sudo mv -f images/*.trx /opt/images
+        sudo cp -p .config /opt/images
         done
 
     - name : Upload artifact
